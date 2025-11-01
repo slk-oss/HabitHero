@@ -10,22 +10,22 @@ xcuserdata/
 # SwiftPM
 .build/
 
-# CocoaPods (на будущее, вдруг подключишь)
+# CocoaPods
 Pods/
 Podfile.lock
 
-# Carthage (на всякий случай)
+# Carthage
 Carthage/Build/
 
-# Fastlane (если когда-нибудь заведёшь CI)
+# Fastlane
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
+fastlane/screenshots/
+fastlane/test_output/
 
 # macOS
 .DS_Store
 
-.DS_Store
-../.DS_Store
-../README.md
+# Ignore project backups or external parent files
+*.orig
+

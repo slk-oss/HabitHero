@@ -47,19 +47,6 @@
 		5BC69A8C2EB6A25000FDC484 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Preview Content"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		5BC69A562EB66BBD00FDC484 /* HabitHeroTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HabitHeroTests;
-			sourceTree = "<group>";
-		};
-		5BC69A602EB66BBD00FDC484 /* HabitHeroUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HabitHeroUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		5BC69A402EB66BBB00FDC484 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -93,8 +80,6 @@
 				5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */,
 				5BC69A822EB6A12100FDC484 /* Views */,
 				5BC69A812EB6A0F800FDC484 /* Models */,
-				5BC69A562EB66BBD00FDC484 /* HabitHeroTests */,
-				5BC69A602EB66BBD00FDC484 /* HabitHeroUITests */,
 				5BC69A442EB66BBB00FDC484 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,9 +147,6 @@
 			dependencies = (
 				5BC69A552EB66BBD00FDC484 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				5BC69A562EB66BBD00FDC484 /* HabitHeroTests */,
-			);
 			name = HabitHeroTests;
 			packageProductDependencies = (
 			);
@@ -184,9 +166,6 @@
 			);
 			dependencies = (
 				5BC69A5F2EB66BBD00FDC484 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5BC69A602EB66BBD00FDC484 /* HabitHeroUITests */,
 			);
 			name = HabitHeroUITests;
 			packageProductDependencies = (
