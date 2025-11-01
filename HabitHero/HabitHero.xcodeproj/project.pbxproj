@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5BC69A892EB6A22700FDC484 /* HabitHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */; };
+		5BC69A8B2EB6A23D00FDC484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC69A8A2EB6A23A00FDC484 /* Assets.xcassets */; };
+		5BC69A8D2EB6A25400FDC484 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 5BC69A8C2EB6A25000FDC484 /* Preview Content */; };
+		5BC69A8F2EB6A46300FDC484 /* HabitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A862EB6A1C300FDC484 /* HabitStore.swift */; };
+		5BC69A902EB6A47200FDC484 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A852EB6A1B600FDC484 /* Habit.swift */; };
+		5BC69A912EB6A47E00FDC484 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A832EB6A18600FDC484 /* ContentView.swift */; };
+		5BC69A922EB6A48800FDC484 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A842EB6A1A200FDC484 /* AddHabitView.swift */; };
+		5BC69A932EB6A51F00FDC484 /* HabitHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5BC69A542EB66BBD00FDC484 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +38,16 @@
 		5BC69A432EB66BBB00FDC484 /* HabitHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC69A532EB66BBD00FDC484 /* HabitHeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitHeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC69A5D2EB66BBD00FDC484 /* HabitHeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitHeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC69A832EB6A18600FDC484 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BC69A842EB6A1A200FDC484 /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		5BC69A852EB6A1B600FDC484 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		5BC69A862EB6A1C300FDC484 /* HabitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStore.swift; sourceTree = "<group>"; };
+		5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitHeroApp.swift; sourceTree = "<group>"; };
+		5BC69A8A2EB6A23A00FDC484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = text; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC69A8C2EB6A25000FDC484 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Preview Content"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5BC69A452EB66BBB00FDC484 /* HabitHero */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HabitHero;
-			sourceTree = "<group>";
-		};
 		5BC69A562EB66BBD00FDC484 /* HabitHeroTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HabitHeroTests;
@@ -75,7 +88,11 @@
 		5BC69A3A2EB66BBB00FDC484 = {
 			isa = PBXGroup;
 			children = (
-				5BC69A452EB66BBB00FDC484 /* HabitHero */,
+				5BC69A8C2EB6A25000FDC484 /* Preview Content */,
+				5BC69A8A2EB6A23A00FDC484 /* Assets.xcassets */,
+				5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */,
+				5BC69A822EB6A12100FDC484 /* Views */,
+				5BC69A812EB6A0F800FDC484 /* Models */,
 				5BC69A562EB66BBD00FDC484 /* HabitHeroTests */,
 				5BC69A602EB66BBD00FDC484 /* HabitHeroUITests */,
 				5BC69A442EB66BBB00FDC484 /* Products */,
@@ -92,6 +109,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5BC69A812EB6A0F800FDC484 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC69A862EB6A1C300FDC484 /* HabitStore.swift */,
+				5BC69A852EB6A1B600FDC484 /* Habit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BC69A822EB6A12100FDC484 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BC69A842EB6A1A200FDC484 /* AddHabitView.swift */,
+				5BC69A832EB6A18600FDC484 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5BC69A452EB66BBB00FDC484 /* HabitHero */,
 			);
 			name = HabitHero;
 			packageProductDependencies = (
@@ -219,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC69A8D2EB6A25400FDC484 /* Preview Content in Resources */,
+				5BC69A8B2EB6A23D00FDC484 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC69A902EB6A47200FDC484 /* Habit.swift in Sources */,
+				5BC69A932EB6A51F00FDC484 /* HabitHeroApp.swift in Sources */,
+				5BC69A922EB6A48800FDC484 /* AddHabitView.swift in Sources */,
+				5BC69A8F2EB6A46300FDC484 /* HabitStore.swift in Sources */,
+				5BC69A912EB6A47E00FDC484 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC69A892EB6A22700FDC484 /* HabitHeroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +344,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"/Users/slk/Desktop/HabitHero/HabitHero/Preview Content\"";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -367,6 +408,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"/Users/slk/Desktop/HabitHero/HabitHero/Preview Content\"";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -395,7 +437,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HabitHero/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -423,7 +464,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HabitHero/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
