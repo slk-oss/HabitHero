@@ -1,0 +1,28 @@
+# Xcode
+DerivedData/
+build/
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xcscmblueprint
+
+# SwiftPM
+.build/
+
+# CocoaPods (на будущее, вдруг подключишь)
+Pods/
+Podfile.lock
+
+# Carthage (на всякий случай)
+Carthage/Build/
+
+# Fastlane (если когда-нибудь заведёшь CI)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# macOS
+.DS_Store
+
