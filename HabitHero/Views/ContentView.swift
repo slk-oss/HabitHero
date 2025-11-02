@@ -8,37 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var habitStore: HabitStore
+    @StateObject private var store = HabitStore()
     @State private var showingAddHabit = false
-
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
-                ForEach(habitStore.habits) { habit in
-                    VStack(alignment: .leading) {
+                ForEach(store.habits) { habit in
+                    HStack {
                         Text(habit.title)
-                            .font(.headline)
-                        Text(habit.description)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                        Spacer()
+                        Text("🔥 \(habit.streak)")
+                            .foregroundColor(.orange)
+                    }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        store.incrementStreak(for: habit)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: store.deleteHabit)
             }
             .navigationTitle("HabitHero")
             .toolbar {
-                Button(action: { showingAddHabit = true }) {
-                    Label("Add", systemImage: "plus")
+                Button(action: { showingAddHabit.toggle() }) {
+                    Image(systemName: "plus")
                 }
             }
             .sheet(isPresented: $showingAddHabit) {
-                AddHabitView()
-                    .environmentObject(habitStore)
+                AddHabitView(store: store)
             }
         }
     }
-
-    private func deleteItems(at offsets: IndexSet) {
-        offsets.map { habitStore.habits[$0] }.forEach(habitStore.removeHabit)
-    }
 }
+

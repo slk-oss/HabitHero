@@ -9,27 +9,28 @@ import SwiftUI
 
 struct AddHabitView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var habitStore: HabitStore
+    @ObservedObject var store: HabitStore
     @State private var title = ""
-    @State private var description = ""
-
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 TextField("Название привычки", text: $title)
-                TextField("Описание", text: $description)
             }
             .navigationTitle("Новая привычка")
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Сохранить") {
-                        let newHabit = Habit(title: title, description: description)
-                        habitStore.addHabit(newHabit)
-                        dismiss()
+                        if !title.isEmpty {
+                            store.addHabit(title: title)
+                            dismiss()
+                        }
                     }
                 }
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Отмена") { dismiss() }
+                    Button("Отмена", role: .cancel) {
+                        dismiss()
+                    }
                 }
             }
         }

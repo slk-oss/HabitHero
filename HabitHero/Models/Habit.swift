@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct Habit: Identifiable, Codable {
+struct Habit: Identifiable, Codable, Equatable {
     var id = UUID()
     var title: String
-    var description: String
-    var streak: Int = 0
+    var streak: Int
+    var lastUpdated: Date
+    
+    mutating func incrementStreak() {
+        streak += 1
+        lastUpdated = Date()
+    }
 }
+
