@@ -8,36 +8,61 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var store = HabitStore()
+    @EnvironmentObject var store: HabitStore
     @State private var showingAddHabit = false
-    
+
     var body: some View {
         NavigationView {
-            List {
-                ForEach(store.habits) { habit in
-                    HStack {
-                        Text(habit.title)
-                        Spacer()
-                        Text("🔥 \(habit.streak)")
-                            .foregroundColor(.orange)
+            Group {
+                if store.habits.isEmpty {
+                    VStack(spacing: 12) {
+                        Text("Добро пожаловать в HabitHero!")
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+
+                        Text("Нажми на кнопку «+», чтобы добавить свою первую привычку.")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        store.incrementStreak(for: habit)
+                } else {
+                    List {
+                        ForEach(store.habits) { habit in
+                            HabitRowView(habit: habit)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    withAnimation(.spring(response: 0.25,
+                                                          dampingFraction: 0.7)) {
+                                        store.incrementStreak(for: habit)
+                                    }
+                                }
+                        }
+                        .onDelete(perform: store.deleteHabit)
                     }
+                    .listStyle(.insetGrouped)
                 }
-                .onDelete(perform: store.deleteHabit)
             }
             .navigationTitle("HabitHero")
             .toolbar {
-                Button(action: { showingAddHabit.toggle() }) {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddHabit = true
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
+                    }
                 }
             }
             .sheet(isPresented: $showingAddHabit) {
-                AddHabitView(store: store)
+                AddHabitView()
+                    .environmentObject(store)
             }
         }
     }
 }
 
+#Preview {
+    ContentView()
+        .environmentObject(HabitStore())
+}

@@ -8,14 +8,23 @@
 import Foundation
 
 struct Habit: Identifiable, Codable, Equatable {
-    var id = UUID()
+    let id: UUID
     var title: String
     var streak: Int
     var lastUpdated: Date
-    
+
+    init(id: UUID = UUID(),
+         title: String,
+         streak: Int = 0,
+         lastUpdated: Date = Date()) {
+        self.id = id
+        self.title = title
+        self.streak = streak
+        self.lastUpdated = lastUpdated
+    }
+
     mutating func incrementStreak() {
         streak += 1
         lastUpdated = Date()
     }
 }
-

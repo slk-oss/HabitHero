@@ -15,6 +15,7 @@
 		5BC69A912EB6A47E00FDC484 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A832EB6A18600FDC484 /* ContentView.swift */; };
 		5BC69A922EB6A48800FDC484 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A842EB6A1A200FDC484 /* AddHabitView.swift */; };
 		5BC69A932EB6A51F00FDC484 /* HabitHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */; };
+		5BE90F982ECB717E0084B0FF /* HabitRowView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90F972ECB717E0084B0FF /* HabitRowView .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5BC69A882EB6A22400FDC484 /* HabitHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitHeroApp.swift; sourceTree = "<group>"; };
 		5BC69A8A2EB6A23A00FDC484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = text; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC69A8C2EB6A25000FDC484 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Preview Content"; sourceTree = "<group>"; };
+		5BE90F972ECB717E0084B0FF /* HabitRowView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitRowView .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				5BC69A842EB6A1A200FDC484 /* AddHabitView.swift */,
 				5BC69A832EB6A18600FDC484 /* ContentView.swift */,
+				5BE90F972ECB717E0084B0FF /* HabitRowView .swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					5BC69A422EB66BBB00FDC484 = {
 						CreatedOnToolsVersion = 16.2;
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC69A902EB6A47200FDC484 /* Habit.swift in Sources */,
+				5BE90F982ECB717E0084B0FF /* HabitRowView .swift in Sources */,
 				5BC69A932EB6A51F00FDC484 /* HabitHeroApp.swift in Sources */,
 				5BC69A922EB6A48800FDC484 /* AddHabitView.swift in Sources */,
 				5BC69A8F2EB6A46300FDC484 /* HabitStore.swift in Sources */,
@@ -347,6 +351,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -404,6 +409,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
